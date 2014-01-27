@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Content 1</string>
+		<key>parents</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Slide 1</string>
+				<key>contenturl</key>
+				<string>1.png</string>
+				<key>slideBgPath</key>
+				<string>1.png</string>
+				<key>hasChilds</key>
+				<false/>
+				<key>children</key>
+				<array/>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Slide 2</string>
+				<key>contenturl</key>
+				<string>6.png</string>
+				<key>slideBgPath</key>
+				<string>6.png</string>
+				<key>hasChilds</key>
+				<true/>
+				<key>children</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>Child 1</string>
+						<key>contenturl</key>
+						<string>7</string>
+						<key>filePath</key>
+						<string>7</string>
+						<key>frame</key>
+						<string>{{100,50},{200,200}}</string>
+						<key>type</key>
+						<string>png</string>
+						<key>contentType</key>
+						<integer>0</integer>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Slide 3</string>
+				<key>contenturl</key>
+				<string>1.png</string>
+				<key>slideBgPath</key>
+				<string>1.png</string>
+				<key>hasChilds</key>
+				<true/>
+				<key>children</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>Child 2</string>
+						<key>contenturl</key>
+						<string>Mylan AdD3</string>
+						<key>filePath</key>
+						<string>Mylan AdD3</string>
+						<key>frame</key>
+						<string>{{100,50},{200,200}}</string>
+						<key>type</key>
+						<string>mp4</string>
+						<key>contentType</key>
+						<integer>1</integer>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Child 2</string>
+						<key>contenturl</key>
+						<string>7</string>
+						<key>filePath</key>
+						<string>7</string>
+						<key>frame</key>
+						<string>{{350,50},{200,200}}</string>
+						<key>type</key>
+						<string>png</string>
+						<key>contentType</key>
+						<integer>0</integer>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Slide 4</string>
+				<key>contenturl</key>
+				<string>3.png</string>
+				<key>slideBgPath</key>
+				<string>3.png</string>
+				<key>hasChilds</key>
+				<false/>
+				<key>children</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>Child 1</string>
+						<key>contenturl</key>
+						<string>3</string>
+						<key>filePath</key>
+						<string>3</string>
+						<key>frame</key>
+						<string>{{50,100},{200,200}}</string>
+						<key>type</key>
+						<string>png</string>
+						<key>contentType</key>
+						<integer>0</integer>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Child 2</string>
+						<key>contenturl</key>
+						<string>4</string>
+						<key>filePath</key>
+						<string>4</string>
+						<key>frame</key>
+						<string>{{400,100},{200,200}}</string>
+						<key>type</key>
+						<string>png</string>
+						<key>contentType</key>
+						<integer>0</integer>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Child 2</string>
+						<key>contenturl</key>
+						<string>bar_graph</string>
+						<key>filePath</key>
+						<string>bar_graph</string>
+						<key>frame</key>
+						<string>{{250,120},{200,200}}</string>
+						<key>type</key>
+						<string>png</string>
+						<key>contentType</key>
+						<integer>0</integer>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Slide 5</string>
+				<key>contenturl</key>
+				<string>4.png</string>
+				<key>slideBgPath</key>
+				<string>4.png</string>
+				<key>hasChilds</key>
+				<true/>
+				<key>children</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>Child 2</string>
+						<key>contenturl</key>
+						<string>6</string>
+						<key>filePath</key>
+						<string>6</string>
+						<key>frame</key>
+						<string>{{300,50},{200,200}}</string>
+						<key>type</key>
+						<string>png</string>
+						<key>contentType</key>
+						<integer>0</integer>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Child 2</string>
+						<key>contenturl</key>
+						<string>7</string>
+						<key>filePath</key>
+						<string>7</string>
+						<key>frame</key>
+						<string>{{230,260},{200,200}}</string>
+						<key>type</key>
+						<string>png</string>
+						<key>contentType</key>
+						<integer>0</integer>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Slide 6</string>
+				<key>contenturl</key>
+				<string>5.png</string>
+				<key>slideBgPath</key>
+				<string>5.png</string>
+				<key>hasChilds</key>
+				<true/>
+				<key>children</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>Child 2</string>
+						<key>contenturl</key>
+						<string>pie_chart</string>
+						<key>filePath</key>
+						<string>pie_chart</string>
+						<key>frame</key>
+						<string>{{40,300},{200,200}}</string>
+						<key>type</key>
+						<string>png</string>
+						<key>contentType</key>
+						<integer>0</integer>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Child 2</string>
+						<key>contenturl</key>
+						<string>bar_graph</string>
+						<key>filePath</key>
+						<string>bar_graph</string>
+						<key>frame</key>
+						<string>{{320,300},{200,200}}</string>
+						<key>type</key>
+						<string>png</string>
+						<key>contentType</key>
+						<integer>0</integer>
+					</dict>
+				</array>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>

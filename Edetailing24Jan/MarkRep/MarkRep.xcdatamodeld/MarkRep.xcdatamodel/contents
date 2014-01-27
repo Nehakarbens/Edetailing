@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="12F37" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Brand" representedClassName="Brand" syncable="YES">
+        <attribute name="brandId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="brandImagePath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="brandImageURl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="brandName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="contents" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Content" inverseName="brand" inverseEntity="Content" syncable="YES"/>
+    </entity>
+    <entity name="Child" representedClassName="Child" syncable="YES">
+        <attribute name="childEndTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="childid" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="childName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="childStartTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="childViewTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="contentType" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="contentUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="filePath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="frame" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isAnimated" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="textColour" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="textSize" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="textStyle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timeInterval" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="parent" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="Parent" inverseName="childs" inverseEntity="Parent" syncable="YES"/>
+        <relationship name="references" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Reference" inverseName="child" inverseEntity="Reference" syncable="YES"/>
+    </entity>
+    <entity name="Content" representedClassName="Content" syncable="YES">
+        <attribute name="contEndTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="contentId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="contentName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="contStartTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dlendTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dlStrTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="downStatus" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="emailEndTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="emailStrTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isUpdateAvail" optional="YES" attributeType="Integer 32" syncable="YES"/>
+        <attribute name="lastdownloaddate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="refEndTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="refStrTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sumEndTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sumStrTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vidEndTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vidStrTime" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="brand" optional="YES" toMany="YES" minCount="1" deletionRule="Cascade" destinationEntity="Brand" inverseName="contents" inverseEntity="Brand" syncable="YES"/>
+        <relationship name="datalist" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DataList" inverseName="content" inverseEntity="DataList" syncable="YES"/>
+        <relationship name="mbrand" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Brand" syncable="YES"/>
+        <relationship name="parent" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Parent" inverseName="content" inverseEntity="Parent" syncable="YES"/>
+        <relationship name="summary" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Summary" inverseName="content" inverseEntity="Summary" syncable="YES"/>
+    </entity>
+    <entity name="ControllerToLaunch" representedClassName="ControllerToLaunch" syncable="YES">
+        <attribute name="brandId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="contentId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="controllerName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isMylan" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="DataList" representedClassName="DataList" syncable="YES">
+        <attribute name="dlDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dlEndTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dlFilepath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dlid" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="dlstartTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dlTimeInterval" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="dlTopic" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dlType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dlViewTime" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="content" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Content" inverseName="datalist" inverseEntity="Content" syncable="YES"/>
+    </entity>
+    <entity name="Parent" representedClassName="Parent" syncable="YES">
+        <attribute name="contentUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hasChilds" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isEnabled" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="parentEndTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parentid" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="parentName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parentStartTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parentViewTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="slideBgPath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timeInterval" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="viewDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="childs" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Child" inverseName="parent" inverseEntity="Child" syncable="YES"/>
+        <relationship name="content" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="Content" inverseName="parent" inverseEntity="Content" syncable="YES"/>
+    </entity>
+    <entity name="Reference" representedClassName="Reference" syncable="YES">
+        <attribute name="contentUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="filepath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="refEndTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="referenceId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="referenceName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="refStartTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="refTimeInterval" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="refViewTime" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="child" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Child" inverseName="references" inverseEntity="Child" syncable="YES"/>
+    </entity>
+    <entity name="Summary" representedClassName="Summary" syncable="YES">
+        <attribute name="summEndTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="summfilePath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="summID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="summStartTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="summTimeInterval" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="summTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="summType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="summURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="summViewTime" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="content" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Content" inverseName="summary" inverseEntity="Content" syncable="YES"/>
+    </entity>
+    <fetchRequest name="aContent" entity="Content"/>
+    <fetchRequest name="AllBrands" entity="Brand"/>
+    <fetchRequest name="AllChilds" entity="Child"/>
+    <fetchRequest name="AllParents" entity="Parent" predicateString="TRUEPREDICATE"/>
+    <elements>
+        <element name="Brand" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Child" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Content" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="ControllerToLaunch" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="DataList" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Parent" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Reference" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Summary" positionX="0" positionY="0" width="0" height="0"/>
+    </elements>
+</model>
