@@ -611,7 +611,7 @@
                     SummaryArray = [ContentDict objectForKey:@"summarys"]; // dataList Array
                     for (int h = 0;h<[SummaryArray count];h++) {
                         SummaryDict = [SummaryArray objectAtIndex:h];
-                        NSLog(@"summ Dict = %@",SummaryDict);
+                        //NSLog(@"summ Dict = %@",SummaryDict);
 
                     }
                     
@@ -669,14 +669,14 @@
             mBrand.brandId = [NSNumber numberWithInteger:[[brandDict objectForKey:@"BrandId"]integerValue]];
             mBrand.brandName = [brandDict objectForKey:@"name"];
             mBrand.brandImageURl = [brandDict objectForKey:@"brandImageURl"];
-            NSLog(@"Brand Name :%@",mBrand.brandName);
+            //NSLog(@"Brand Name :%@",mBrand.brandName);
 
        
         
         NSArray *contentArr = [brandDict objectForKey:@"contents"];
         
           NSMutableArray *contentArray = [[NSMutableArray alloc] init];
-            NSLog(@"Contentarrrray = %@",contentArray);
+            //NSLog(@"Contentarrrray = %@",contentArray);
             
         for (NSDictionary *aDict in contentArr)
         {
@@ -1054,7 +1054,7 @@
         
     }
 
-    NSLog(@"dbBrandArray = %@",dbBrandArray);
+    //NSLog(@"dbBrandArray = %@",dbBrandArray);
     
     return dbBrandArray;
     

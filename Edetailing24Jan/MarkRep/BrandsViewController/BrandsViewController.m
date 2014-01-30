@@ -36,6 +36,7 @@ static NSString *kViewerURLScheme = @"com.anant.Mylan";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    isNetworkCall = TRUE;
     
     if ([self respondsToSelector:@selector(edgesForExtendedLayout)])
         self.edgesForExtendedLayout = UIRectEdgeNone;
@@ -65,9 +66,10 @@ static NSString *kViewerURLScheme = @"com.anant.Mylan";
     
     
     self.navigationItem.rightBarButtonItems = (NSArray *)aBarItems;
-    UIBarButtonItem *alefttbarButton = [[UIBarButtonItem alloc] initWithTitle:@"Setting" style:UIBarButtonItemStyleBordered target:self action:@selector(settingAction:)];
-    alefttbarButton.style = UIBarButtonItemStyleBordered;
-    self.navigationItem.leftBarButtonItem=alefttbarButton;
+    
+//    UIBarButtonItem *alefttbarButton = [[UIBarButtonItem alloc] initWithTitle:@"Setting" style:UIBarButtonItemStyleBordered target:self action:@selector(settingAction:)];
+//    alefttbarButton.style = UIBarButtonItemStyleBordered;
+//    self.navigationItem.leftBarButtonItem=alefttbarButton;
     
     self.navigationController.delegate = self;
     
@@ -123,8 +125,11 @@ static NSString *kViewerURLScheme = @"com.anant.Mylan";
     
         
         UrlStr = [NSString stringWithFormat:@"http://www.my-day.in/E-detailingv1/webservices/edetailerXml.php?username=%@&password=%@&date=%@&cid=%@&device_token=%@&type=0",username,password,dateString,cidString,deviceToken];
+//        
         
+//        UrlStr = [NSString stringWithFormat:@"http://www.my-day.in/E-detailing/webservices/edetailerXml.php?username=%@&password=%@&date=%@&cid=%@&device_token=%@&type=0",@"103977",@"mylan",dateString,cidString,@""];
         
+
         NSLog(@"UrlStr = %@",UrlStr);
         
        // UrlStr =[NSString stringWithFormat:@"%s","http://173.192.152.119/E-detailing/webservices/edetailerXml.php?username=00900034&password=123456&date=2013-12-02 12:47:42&cid=4"];
@@ -211,9 +216,12 @@ static NSString *kViewerURLScheme = @"com.anant.Mylan";
 
 -(void) viewWillAppear:(BOOL)animated
 {
+   if (isNetworkCall == FALSE) {
     NSLog(@"Brands View: View WIll APpear Called");
-    
-    
+////isNetworkCall = FALSE;
+    [self loadGridView];
+//    
+   }
 }
 
 -(IBAction)Exit:(id)sender
@@ -237,6 +245,7 @@ static NSString *kViewerURLScheme = @"com.anant.Mylan";
 }
 
 -(IBAction)Refresh:(id)sender{
+     isNetworkCall = TRUE;
     
     AppDelegate *aAppDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     
@@ -292,6 +301,10 @@ static NSString *kViewerURLScheme = @"com.anant.Mylan";
             
             
             UrlStr = [NSString stringWithFormat:@"http://www.my-day.in/E-detailingv1/webservices/edetailerXml.php?username=%@&password=%@&date=%@&cid=%@&device_token=%@&type=0",username,password,dateString,cidString,deviceToken];
+            
+//            UrlStr = [NSString stringWithFormat:@"http://www.my-day.in/E-detailing/webservices/edetailerXml.php?username=%@&password=%@&date=%@&cid=%@&device_token=%@&type=0",@"103977",@"mylan",dateString,cidString,@""];
+
+            NSLog(@"refresh URL = %@",UrlStr);
             
             [[UIApplication sharedApplication]beginIgnoringInteractionEvents];
 
@@ -355,15 +368,17 @@ static NSString *kViewerURLScheme = @"com.anant.Mylan";
 
 #pragma mark - Load GridView
 - (void)loadGridView {
-    
-    [[UIApplication sharedApplication]endIgnoringInteractionEvents];
-    [indicator stopAnimating];
-    _lbl.hidden = YES;
-    [indicator release];
-    [_lbl release];
-    
+    if (isNetworkCall == TRUE)
+    {
+        [[UIApplication sharedApplication]endIgnoringInteractionEvents];
+        [indicator stopAnimating];
+        _lbl.hidden = YES;
+        [indicator release];
+        [_lbl release];
+        
+    }
+    isNetworkCall = FALSE;
     AppDelegate *aAppDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    
     brands = [[NSMutableArray alloc]initWithArray:aAppDelegate.dbBrandArr];
     
     for (UIView *aView in [_ScrollView subviews]) {
@@ -415,6 +430,7 @@ static NSString *kViewerURLScheme = @"com.anant.Mylan";
             if (aBrand.brandImagePath == nil) {
                 
                  mainImgView.image = [UIImage imageNamed:@"button frame.png"];
+                aGridView.brandName =Cname;
             }
             else{
                 NSData *data = [NSData dataWithContentsOfFile:aBrand.brandImagePath];
@@ -422,10 +438,11 @@ static NSString *kViewerURLScheme = @"com.anant.Mylan";
                 if (data != nil) {
                     UIImage *image = [UIImage imageWithData:data];
                     mainImgView.image = image;
-                    
+                   aGridView.brandName =@"";
                 }
                 else {
                     mainImgView.image = [UIImage imageNamed:@"button frame.png"];
+                    aGridView.brandName =Cname;
                 }
 
             }
@@ -442,7 +459,7 @@ static NSString *kViewerURLScheme = @"com.anant.Mylan";
             [mainImgView release];
             mainImgView = nil;
             
-            aGridView.brandName =Cname;
+            
             
             //aGridView.image1 = [UIImage imageNamed:@"pause.png"];
             
@@ -536,7 +553,12 @@ static NSString *kViewerURLScheme = @"com.anant.Mylan";
     
     [brands setArray:[[NSSet setWithArray:brands]allObjects]];
     
-    
+    [[UIApplication sharedApplication]endIgnoringInteractionEvents];
+    [indicator stopAnimating];
+    _lbl.hidden = YES;
+    [indicator release];
+    [_lbl release];
+
     
     [self loadGridView];
     

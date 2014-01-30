@@ -16,6 +16,7 @@
     
          NSString *UrlStr;
      UIActivityIndicatorView *indicator;
+    BOOL isNetworkCall;
     
 }
 

@@ -569,6 +569,7 @@ static UIView *Grid;
 }
 -(void)didFinishAllDownload:(NSMutableDictionary *)Queue{
     NSLog(@"All download complete Queue");
+      AppDelegate *aAppDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     
     GridView *gridView =[[Queue objectForKey:@"Content"]objectForKey:@"IndexOfContent"];
     
@@ -579,6 +580,10 @@ static UIView *Grid;
     NSNumber *Cid = [aContentDict objectForKey:@"contentID"];
     
     Content *aContent = [Utility getContentIfExist:Cid] ;
+    
+    NSUInteger indx = [[_ContentDict objectForKey:@"index"]integerValue];
+    
+    [[[[aAppDelegate.brandArr objectAtIndex:brandIndex]objectForKey:@"contents"] objectAtIndex:indx] setObject:@"NO" forKey:@"Downloading"];
     
     NSMutableArray *aParents = [[NSMutableArray alloc]initWithArray:[[aContent parent]allObjects]];
     
@@ -594,11 +599,12 @@ static UIView *Grid;
         [imageView setImage:image];
         
         [gridView addSubview:imageView];
+    }
         [gridView bringSubviewToFront:gridView.brandLabel];
         [gridView bringSubviewToFront:gridView.DownloadButton];
         [gridView bringSubviewToFront:gridView.DownloadProgress];
         
-    }
+    
 
 }
 
@@ -878,10 +884,39 @@ static UIView *Grid;
 
 
 -(IBAction)BACK:(id)sender{
+    AppDelegate *aAppDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    BOOL isDownloading;
+    for (NSMutableDictionary *bDict in aAppDelegate.brandArr) {
+        
+        
+        if ([[bDict objectForKey:@"BrandId"] isEqualToString:[NSString stringWithFormat:@"%@",brandID]])
+        {
+            NSMutableArray *CDict = [bDict objectForKey:@"contents"];
+            for (NSMutableDictionary *cDict in CDict){
+                if ([[cDict objectForKey:@"Downloading"] isEqualToString:@"YES"]) // Pause Action
+                {
+                    isDownloading = TRUE;
+                    break;
+                }
+                else
+                {
+                    isDownloading = FALSE;
+                    
+                }
+            }
+        }
+    }
     
-    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Alert" message:@"Are you sure you want to go back? Download will be Interrupted if any." delegate:self cancelButtonTitle:@"YES" otherButtonTitles:@"NO",nil];
-    alertView.tag = 1;
-    [alertView show];
+    if (isDownloading == TRUE) {
+        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Alert" message:@"Are you sure you want to go back? Download will be Interrupted if any." delegate:self cancelButtonTitle:@"YES" otherButtonTitles:@"NO",nil];
+        alertView.tag = 1;
+        [alertView show];
+
+    }
+    else{
+         [self.navigationController popViewControllerAnimated:YES];
+    }
+   
     
 }
 

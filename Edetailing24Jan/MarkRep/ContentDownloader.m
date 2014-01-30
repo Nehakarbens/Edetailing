@@ -576,14 +576,19 @@ if (![[aContent objectForKey:@"contentName"]isEqualToString:nil]) {
     
    // AppDelegate *aAppDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     NSLog(@"Image Fetch Complete");
+   
     NSString *path = [request downloadDestinationPath];
+    
     NSLog(@"path = %@",path);
     
-    //NSLog(@"Request userinfo %@",[[request userInfo] objectForKey:@"brand"]);
+    NSLog(@"RESponse Code for %@ = %d",[path lastPathComponent],[request responseStatusCode]);
+           if ([request responseStatusCode] == 200)
+            {
+        //        NSLog(@"NOT FOUND");
+        
     NSMutableDictionary *BDict = [[request userInfo] objectForKey:@"brand"];
-//    
+    
     [BDict setObject:path forKey:@"brandImagePath"];
-//    NSLog(@"LogoPath = %@",path);
     
     NSMutableDictionary *PrntDict = [[request userInfo] objectForKey:@"parent"];
     
@@ -612,11 +617,10 @@ if (![[aContent objectForKey:@"contentName"]isEqualToString:nil]) {
         [RefDict setObject:path forKey:@"filePath"];
     }
     
-    if ([request responseStatusCode] != 200)
-    {
-        NSLog(@"NOT FOUND");
-//        [self RequestFailed:networkQueue];
-    }
+   
+        
+        //[self RequestFailed:request];
+    
     else
     {
         // delegate for progress
@@ -629,6 +633,7 @@ if (![[aContent objectForKey:@"contentName"]isEqualToString:nil]) {
         }
  
     }
+            }
     
 
 
