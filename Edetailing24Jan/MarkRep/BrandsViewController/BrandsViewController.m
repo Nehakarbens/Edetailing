@@ -124,10 +124,10 @@ static NSString *kViewerURLScheme = @"com.anant.Mylan";
         NSString *password = [[NSUserDefaults standardUserDefaults]objectForKey:@"password"];
     
         
-        UrlStr = [NSString stringWithFormat:@"http://www.my-day.in/E-detailingv1/webservices/edetailerXml.php?username=%@&password=%@&date=%@&cid=%@&device_token=%@&type=0",username,password,dateString,cidString,deviceToken];
-//        
+       // UrlStr = [NSString stringWithFormat:@"http://www.my-day.in/E-detailingv1/webservices/edetailerXml.php?username=%@&password=%@&date=%@&cid=%@&device_token=%@&type=0",username,password,dateString,cidString,deviceToken];
+//
         
-//        UrlStr = [NSString stringWithFormat:@"http://www.my-day.in/E-detailing/webservices/edetailerXml.php?username=%@&password=%@&date=%@&cid=%@&device_token=%@&type=0",@"103977",@"mylan",dateString,cidString,@""];
+        UrlStr = [NSString stringWithFormat:@"http://www.my-day.in/E-detailing/webservices/edetailerXml.php?username=%@&password=%@&date=%@&cid=%@&device_token=%@&type=0",username,password,dateString,cidString,@""];
         
 
         NSLog(@"UrlStr = %@",UrlStr);
@@ -300,9 +300,9 @@ static NSString *kViewerURLScheme = @"com.anant.Mylan";
             NSString *password = [[NSUserDefaults standardUserDefaults]objectForKey:@"password"];
             
             
-            UrlStr = [NSString stringWithFormat:@"http://www.my-day.in/E-detailingv1/webservices/edetailerXml.php?username=%@&password=%@&date=%@&cid=%@&device_token=%@&type=0",username,password,dateString,cidString,deviceToken];
+          // UrlStr = [NSString stringWithFormat:@"http://www.my-day.in/E-detailingv1/webservices/edetailerXml.php?username=%@&password=%@&date=%@&cid=%@&device_token=%@&type=0",username,password,dateString,cidString,deviceToken];
             
-//            UrlStr = [NSString stringWithFormat:@"http://www.my-day.in/E-detailing/webservices/edetailerXml.php?username=%@&password=%@&date=%@&cid=%@&device_token=%@&type=0",@"103977",@"mylan",dateString,cidString,@""];
+           UrlStr = [NSString stringWithFormat:@"http://www.my-day.in/E-detailing/webservices/edetailerXml.php?username=%@&password=%@&date=%@&cid=%@&device_token=%@&type=0",username,password,dateString,cidString,@""];
 
             NSLog(@"refresh URL = %@",UrlStr);
             
@@ -492,7 +492,8 @@ static NSString *kViewerURLScheme = @"com.anant.Mylan";
     
     Brand *aBrand = [brands objectAtIndex:inGridView.tag - 1];
     //[[NSUserDefaults standardUserDefaults] setObject:aBrandName forKey:@"brandName"];
-//     [[NSUserDefaults standardUserDefaults] setObject:@"notFromMylan" forKey:@"source"];
+    
+    [[NSUserDefaults standardUserDefaults] setObject:@"fromBrandView" forKey:@"source"];
     
     
     ContentViewController *aContentViewController = [[ContentViewController alloc] initWithNibName:@"ContentViewController" bundle:nil];

@@ -104,8 +104,8 @@
                   continueAfterRunningActions = "No"
                   symbolName = "-[MRParentViewController exitButtonPressed:]"
                   moduleName = "EDetailing"
-                  urlString = "file://localhost/Users/karbens/Downloads/Edetailing30Jan/MarkRep/ParentController/MRParentViewController.m"
-                  timestampString = "412771775.51701"
+                  urlString = "file://localhost/Users/karbens/Edetailing/Edetailing24Jan/MarkRep/ParentController/MRParentViewController.m"
+                  timestampString = "412847015.093638"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "754"
@@ -118,8 +118,8 @@
                   continueAfterRunningActions = "No"
                   symbolName = "-[MRParentViewController exitButtonPressed:]"
                   moduleName = "EDetailing"
-                  urlString = "file://localhost/Users/karbens/Downloads/Edetailing30Jan/MarkRep/ParentController/MRParentViewController.m"
-                  timestampString = "412771775.517514"
+                  urlString = "file://localhost/Users/karbens/Edetailing/Edetailing24Jan/MarkRep/ParentController/MRParentViewController.m"
+                  timestampString = "412847015.093931"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "754"
@@ -632,11 +632,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MarkRep/ContentDownloader.m"
-            timestampString = "412774363.529794"
+            timestampString = "412849237.355894"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1048"
-            endingLineNumber = "1048"
+            startingLineNumber = "1050"
+            endingLineNumber = "1050"
             landmarkName = "-imageFetchFailed:"
             landmarkType = "5">
          </BreakpointContent>
@@ -648,11 +648,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MarkRep/ContentDownloader.m"
-            timestampString = "412774363.529794"
+            timestampString = "412849237.355894"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "986"
-            endingLineNumber = "986"
+            startingLineNumber = "988"
+            endingLineNumber = "988"
             landmarkName = "-imageFetchComplete:"
             landmarkType = "5">
          </BreakpointContent>
@@ -664,27 +664,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MarkRep/ContentDownloader.m"
-            timestampString = "412774363.529794"
+            timestampString = "412849237.355894"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "992"
-            endingLineNumber = "992"
-            landmarkName = "-imageFetchComplete:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MarkRep/ContentDownloader.m"
-            timestampString = "412774363.529794"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1002"
-            endingLineNumber = "1002"
+            startingLineNumber = "994"
+            endingLineNumber = "994"
             landmarkName = "-imageFetchComplete:"
             landmarkType = "5">
          </BreakpointContent>
@@ -727,38 +711,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MarkRep/ContentViewController.m"
-            timestampString = "412769740.253807"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "886"
-            endingLineNumber = "886"
-            landmarkName = "-BACK:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MarkRep/ContentViewController.m"
-            timestampString = "412769740.253807"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "894"
-            endingLineNumber = "894"
-            landmarkName = "-BACK:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "MarkRep/BrandsViewController/BrandsViewController.m"
             timestampString = "412775375.526644"
             startingColumnNumber = "9223372036854775807"
@@ -766,6 +718,86 @@
             startingLineNumber = "217"
             endingLineNumber = "217"
             landmarkName = "-viewWillAppear:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MarkRep/ContentViewController.m"
+            timestampString = "412843505.094167"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "924"
+            endingLineNumber = "924"
+            landmarkName = "-BACK:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MarkRep/ContentDownloader.m"
+            timestampString = "412849237.355894"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "578"
+            endingLineNumber = "578"
+            landmarkName = "-imageFetchrequestComplete:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MarkRep/ContentDownloader.m"
+            timestampString = "412849237.355894"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "586"
+            endingLineNumber = "586"
+            landmarkName = "-imageFetchrequestComplete:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MarkRep/ContentDownloader.m"
+            timestampString = "412849237.355894"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "630"
+            endingLineNumber = "630"
+            landmarkName = "-imageFetchrequestComplete:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MarkRep/ContentDownloader.m"
+            timestampString = "412849237.355894"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "634"
+            endingLineNumber = "634"
+            landmarkName = "-imageFetchrequestComplete:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

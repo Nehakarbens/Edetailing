@@ -1000,7 +1000,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ANANT INFOMEDIA PRIVATE LIMITED PRIVATE LIMITED";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ANANT INFOMEDIA PRIVATE LIMITED PRIVATE LIMITED";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1085,7 +1085,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ANANT INFOMEDIA PRIVATE LIMITED PRIVATE LIMITED";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ANANT INFOMEDIA PRIVATE LIMITED PRIVATE LIMITED";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1106,7 +1106,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ANANT INFOMEDIA PRIVATE LIMITED PRIVATE LIMITED";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ANANT INFOMEDIA PRIVATE LIMITED PRIVATE LIMITED";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

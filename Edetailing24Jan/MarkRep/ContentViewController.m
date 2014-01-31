@@ -21,12 +21,16 @@
 #import "Reachability.h"
 #import "ContentDetailViewController.h"
 #import <objc/runtime.h>
-
+#import "MDDataPackage.h"
+#import "MDDataSharingController.h"
 
 static UIView *Grid;
+static NSString *kViewerURLScheme = @"com.anant.Mylan";
+
 @interface ContentViewController ()
 @property (retain, nonatomic) IBOutlet UIScrollView *ScrollView;
 @end
+
 
 @implementation ContentViewController
 
@@ -175,6 +179,7 @@ static UIView *Grid;
      Brand *aBrand = [Utility getBrandIfExist:brandID];
     self.title = aBrand.brandName;
     NSString *Str = [NSString stringWithFormat:@"< %@",aBrand.brandName];
+    
     UIBarButtonItem *newBackButton = [[UIBarButtonItem alloc] initWithTitle:Str style: UIBarButtonItemStyleBordered target:self action: @selector(BACK:)];
     
     [[self navigationItem] setLeftBarButtonItem:newBackButton];
@@ -589,7 +594,10 @@ static UIView *Grid;
     
     NSArray *sortedArray = [(NSArray *)aParents sortedArrayUsingDescriptors:[NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"Parentid" ascending:YES]]];
     
-    if ([sortedArray count] != 0) {
+    if([aContent.downStatus isEqualToNumber:[NSNumber numberWithInteger:1]]){
+        
+    
+    if ([sortedArray count] != 0 ) {
         
         Parent *aPar = [sortedArray objectAtIndex:0];
         
@@ -604,7 +612,7 @@ static UIView *Grid;
         [gridView bringSubviewToFront:gridView.DownloadButton];
         [gridView bringSubviewToFront:gridView.DownloadProgress];
         
-    
+    }
 
 }
 
@@ -914,7 +922,29 @@ static UIView *Grid;
 
     }
     else{
+       NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+        NSString *Str = [userDefault objectForKey:@"source"];
+        if ([Str isEqualToString:@"FromMylan"])
+        {
+            MDDataPackage *package = [MDDataPackage dataPackageForCurrentApplicationWithPayload:[NSData dataWithContentsOfURL:nil]];
+            [MDDataSharingController sendDataToApplicationWithScheme:kViewerURLScheme
+                                                         dataPackage:package
+                                                   completionHandler:^(BOOL *sent, NSError *error) {
+                                                       if (sent)
+                                                       {
+                                                           NSLog(@"Data Package Sent");
+                                                       }
+                                                       else if (error)
+                                                       {
+                                                           NSLog(@"Error sending data package: %@", [error localizedDescription]);
+                                                       }
+                                                   }];
+
+        }
+        else if ([Str isEqualToString:@"fromBrandView"])
+        {
          [self.navigationController popViewControllerAnimated:YES];
+        }
     }
    
     

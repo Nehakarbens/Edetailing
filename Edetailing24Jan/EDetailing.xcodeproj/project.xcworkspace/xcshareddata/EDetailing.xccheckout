@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F88C2352-61C9-4498-AA21-6F32C0AE5F59</string>
+	<key>IDESourceControlProjectName</key>
+	<string>EDetailing</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>07248AB8-6AA4-4D01-966B-C791E177E64C</key>
+		<string>https://github.com/Nehakarbens/Edetailing.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Edetailing24Jan/EDetailing.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>07248AB8-6AA4-4D01-966B-C791E177E64C</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Nehakarbens/Edetailing.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>07248AB8-6AA4-4D01-966B-C791E177E64C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>07248AB8-6AA4-4D01-966B-C791E177E64C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Edetailing</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -548,7 +548,11 @@ if (![[aContent objectForKey:@"contentName"]isEqualToString:nil]) {
     
     [aContent setObject:[NSString stringWithFormat:@"%d",[QueueArray count]]forKey:@"TotalContent"];
     
-    [networkQueue go];
+    
+    if ([DownloadContent integerValue] > 0) {
+          [networkQueue go];
+    }
+  
     
     
 }
@@ -621,8 +625,6 @@ if (![[aContent objectForKey:@"contentName"]isEqualToString:nil]) {
         
         //[self RequestFailed:request];
     
-    else
-    {
         // delegate for progress
         if ([aDelegate respondsToSelector:@selector(didFinishDownload:)])
         {
@@ -632,7 +634,7 @@ if (![[aContent objectForKey:@"contentName"]isEqualToString:nil]) {
                        [aDelegate performSelector:@selector(didFinishDownload:) withObject: [request userInfo]];
         }
  
-    }
+    
             }
     
 
