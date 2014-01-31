@@ -331,18 +331,20 @@ static NSString *kViewerURLScheme = @"com.anant.Mylan";
                 
                 mainImgView.image = [UIImage imageNamed:@"button frame.png"];
             }
-            else{
+            else  if ([aContent.downStatus isEqualToNumber:[NSNumber numberWithInteger:1]])
+            {
                 NSData *data = [NSData dataWithContentsOfFile:aPar.slideBgPath];
-                if (data != nil) {
+                if (data != nil)
+                {
                     UIImage *image = [UIImage imageWithData:data];
                     mainImgView.image = image;
-
+                    
                 }
-                else {
-                    mainImgView.image = [UIImage imageNamed:@"button frame.png"];
-                }
-                
             }
+            else {
+                mainImgView.image = [UIImage imageNamed:@"button frame.png"];
+            }
+
 
             
             if ([aContent.isUpdateAvail isEqualToNumber:[NSNumber numberWithInteger:1]])

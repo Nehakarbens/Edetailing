@@ -28,6 +28,8 @@
 
 - (void)viewDidLoad
 {
+    
+    self.title=@"Setting";
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
@@ -134,6 +136,9 @@
                 [self  deletecontentindatabase:[contentName objectAtIndex:j]];
             }
             [contentName release];
+            
+            
+            [aAppDelegate.dbBrandArr removeAllObjects];
             
         }
         

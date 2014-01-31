@@ -67,9 +67,10 @@ static NSString *kViewerURLScheme = @"com.anant.Mylan";
     
     self.navigationItem.rightBarButtonItems = (NSArray *)aBarItems;
     
-//    UIBarButtonItem *alefttbarButton = [[UIBarButtonItem alloc] initWithTitle:@"Setting" style:UIBarButtonItemStyleBordered target:self action:@selector(settingAction:)];
-//    alefttbarButton.style = UIBarButtonItemStyleBordered;
-//    self.navigationItem.leftBarButtonItem=alefttbarButton;
+    UIBarButtonItem *alefttbarButton = [[UIBarButtonItem alloc] initWithTitle:@"Setting" style:UIBarButtonItemStyleBordered target:self action:@selector(settingAction:)];
+    
+    alefttbarButton.style = UIBarButtonItemStyleBordered;
+    self.navigationItem.leftBarButtonItem=alefttbarButton;
     
     self.navigationController.delegate = self;
     
@@ -124,10 +125,10 @@ static NSString *kViewerURLScheme = @"com.anant.Mylan";
         NSString *password = [[NSUserDefaults standardUserDefaults]objectForKey:@"password"];
     
         
-       // UrlStr = [NSString stringWithFormat:@"http://www.my-day.in/E-detailingv1/webservices/edetailerXml.php?username=%@&password=%@&date=%@&cid=%@&device_token=%@&type=0",username,password,dateString,cidString,deviceToken];
+        UrlStr = [NSString stringWithFormat:@"http://www.my-day.in/E-detailingv1/webservices/edetailerXml.php?username=%@&password=%@&date=%@&cid=%@&device_token=%@&type=0",username,password,dateString,cidString,deviceToken];
 //
         
-        UrlStr = [NSString stringWithFormat:@"http://www.my-day.in/E-detailing/webservices/edetailerXml.php?username=%@&password=%@&date=%@&cid=%@&device_token=%@&type=0",username,password,dateString,cidString,@""];
+       // UrlStr = [NSString stringWithFormat:@"http://www.my-day.in/E-detailing/webservices/edetailerXml.php?username=%@&password=%@&date=%@&cid=%@&device_token=%@&type=0",username,password,dateString,cidString,@""];
         
 
         NSLog(@"UrlStr = %@",UrlStr);
@@ -196,7 +197,7 @@ static NSString *kViewerURLScheme = @"com.anant.Mylan";
 -(IBAction)settingAction:(id)sender
 {
     settingViewController * svc=[[settingViewController alloc]init];
-    [self presentViewController:svc animated:YES completion:nil];
+    [self.navigationController pushViewController:svc animated:YES];
     
     
 }
@@ -300,9 +301,9 @@ static NSString *kViewerURLScheme = @"com.anant.Mylan";
             NSString *password = [[NSUserDefaults standardUserDefaults]objectForKey:@"password"];
             
             
-          // UrlStr = [NSString stringWithFormat:@"http://www.my-day.in/E-detailingv1/webservices/edetailerXml.php?username=%@&password=%@&date=%@&cid=%@&device_token=%@&type=0",username,password,dateString,cidString,deviceToken];
+           UrlStr = [NSString stringWithFormat:@"http://www.my-day.in/E-detailingv1/webservices/edetailerXml.php?username=%@&password=%@&date=%@&cid=%@&device_token=%@&type=0",username,password,dateString,cidString,deviceToken];
             
-           UrlStr = [NSString stringWithFormat:@"http://www.my-day.in/E-detailing/webservices/edetailerXml.php?username=%@&password=%@&date=%@&cid=%@&device_token=%@&type=0",username,password,dateString,cidString,@""];
+          // UrlStr = [NSString stringWithFormat:@"http://www.my-day.in/E-detailing/webservices/edetailerXml.php?username=%@&password=%@&date=%@&cid=%@&device_token=%@&type=0",username,password,dateString,cidString,@""];
 
             NSLog(@"refresh URL = %@",UrlStr);
             
