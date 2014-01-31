@@ -45,6 +45,7 @@
 		103713371807BDF400B94E40 /* MRParentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFE634BC17B94162008CB80B /* MRParentViewController.xib */; };
 		1037133B1808141100B94E40 /* SlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 103713391808141100B94E40 /* SlideViewController.m */; };
 		1037133C1808141100B94E40 /* SlideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1037133A1808141100B94E40 /* SlideViewController.xib */; };
+		103799B8189BC3E0007D68EF /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 103799B7189BC3E0007D68EF /* button.png */; };
 		103D29CE18757195007F8C31 /* Reference.m in Sources */ = {isa = PBXBuildFile; fileRef = 103D29CD18757195007F8C31 /* Reference.m */; };
 		103D29D118758112007F8C31 /* DataList.m in Sources */ = {isa = PBXBuildFile; fileRef = 103D29D018758112007F8C31 /* DataList.m */; };
 		103E2240186E95860047DEA6 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 103E223E186E95860047DEA6 /* Icon.png */; };
@@ -206,6 +207,7 @@
 		103713381808141100B94E40 /* SlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideViewController.h; sourceTree = "<group>"; };
 		103713391808141100B94E40 /* SlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideViewController.m; sourceTree = "<group>"; };
 		1037133A1808141100B94E40 /* SlideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SlideViewController.xib; sourceTree = "<group>"; };
+		103799B7189BC3E0007D68EF /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
 		103D29CC18757195007F8C31 /* Reference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reference.h; sourceTree = "<group>"; };
 		103D29CD18757195007F8C31 /* Reference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reference.m; sourceTree = "<group>"; };
 		103D29CF18758112007F8C31 /* DataList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataList.h; sourceTree = "<group>"; };
@@ -666,6 +668,7 @@
 				BFC7593B17BA9C74007139B3 /* 8.png */,
 				BFE634DB17B96CF8008CB80B /* bar_graph.png */,
 				BFE634DC17B96CF8008CB80B /* pie_chart.png */,
+				103799B7189BC3E0007D68EF /* button.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -856,6 +859,7 @@
 				10567198182B5C7F0074B00F /* DataListViewController.xib in Resources */,
 				10A82FA71869A6B90003D930 /* summ.png in Resources */,
 				BF05CFE017C299A600D327C9 /* maximize.jpeg in Resources */,
+				103799B8189BC3E0007D68EF /* button.png in Resources */,
 				105DE125187D615200FFB841 /* exit_36.png in Resources */,
 				BF05CFE217C29C7C00D327C9 /* close.jpeg in Resources */,
 				10209972180C18B800BF3F2E /* button frame.png in Resources */,
